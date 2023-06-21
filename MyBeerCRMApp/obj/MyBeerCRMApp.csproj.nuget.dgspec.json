@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\All VS Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj": {}
+    "D:\\All_VS_Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj": {}
   },
   "projects": {
-    "D:\\All VS Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj": {
+    "D:\\All_VS_Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\All VS Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj",
+        "projectUniqueName": "D:\\All_VS_Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj",
         "projectName": "MyBeerCRMApp",
-        "projectPath": "D:\\All VS Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj",
+        "projectPath": "D:\\All_VS_Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\All VS Projects\\MyBeerCRMApp\\MyBeerCRMApp\\obj\\",
+        "outputPath": "D:\\All_VS_Projects\\MyBeerCRMApp\\MyBeerCRMApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "73/Odvltnljwo5ki09QEWb/zBkZvryRgQ91SKNZ3V1fCmy+WUF65LxPUmojDUU85oaDNmY/T7iafAtWK1MOSHg==",
+  "dgSpecHash": "dgM4cZlTjmW8vNM1f+x3RqkpIjLytH8I9Fws/npgtSge1aC6BcbawWT/KnY4xhW89aFPXtOb2w0BFJFznXtmDQ==",
   "success": true,
-  "projectFilePath": "D:\\All VS Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj",
+  "projectFilePath": "D:\\All_VS_Projects\\MyBeerCRMApp\\MyBeerCRMApp\\MyBeerCRMApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

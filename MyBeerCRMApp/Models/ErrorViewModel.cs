@@ -1,4 +1,4 @@
-namespace MyBeerCRMApp.Models
+namespace MyApp1.Models
 {
     public class ErrorViewModel
     {
