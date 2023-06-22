@@ -44,6 +44,38 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/All_VS_Projects/MyBeerCRMApp/MyBeerCRMApp/Views/Beer/BeerEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVlclxCZWVyRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/All_VS_Projects/MyBeerCRMApp/MyBeerCRMApp/Views/Beer/BeerIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVlclxCZWVySW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/All_VS_Projects/MyBeerCRMApp/MyBeerCRMApp/Views/Beer/CreateBeer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVlclxDcmVhdGVCZWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/All_VS_Projects/MyBeerCRMApp/MyBeerCRMApp/Views/Beer/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVlclxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/All_VS_Projects/MyBeerCRMApp/MyBeerCRMApp/Views/Brewery/BreweryIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJld2VyeVxCcmV3ZXJ5SW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/All_VS_Projects/MyBeerCRMApp/MyBeerCRMApp/Views/Brewery/CreateBreweries.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJld2VyeVxDcmVhdGVCcmV3ZXJpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/All_VS_Projects/MyBeerCRMApp/MyBeerCRMApp/Views/Brewery/EditBreweries.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJld2VyeVxFZGl0QnJld2VyaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/All_VS_Projects/MyBeerCRMApp/MyBeerCRMApp/Views/Brewery/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJld2VyeVxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/All_VS_Projects/MyBeerCRMApp/MyBeerCRMApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

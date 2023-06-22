@@ -1,0 +1,17 @@
+﻿@model MyBeerCRMApp.Models.Beer
+
+<h2>Добавление пиво</h2>
+<form asp-action="createBeer" asp-controller="Beer">
+    <p>
+        <label asp-for="name">Название пива</label><br />
+        <input type="text" asp-for="name" />
+    </p>
+    <p>
+        <label asp-for="quantity">Объем</label><br />
+        <input type="text" asp-for="quantity" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
+

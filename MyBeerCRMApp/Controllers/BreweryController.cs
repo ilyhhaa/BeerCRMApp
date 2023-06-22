@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using MyApp1.Models;
+using MyBeerCRMApp.Models;
 using System.Diagnostics;
 using System.Text;
 
 namespace MyApp1.Controllers
 {
+    [Authorize]
     public class BreweryController : Controller
     {
        
@@ -22,30 +24,7 @@ namespace MyApp1.Controllers
         }
 
 
-        //РОЗОБРАТЬСЯ В СОРТИРОВКЕ********************************************************************************************************************************************
-       
-        
-        
-        //ЗДЕСЬ ВНУТРИ СОРТИРОВКА ДЛДЯ ПИВА!
-        
-        
-        
-        /*public async Task <IActionResult> BreweryIndex(SortStateBeer sortStateBeer = SortStateBeer.NameDesc)
-        {
-            IQueryable<Beer>? beersSort = db.beers.Include(x => x.name);
-
-            ViewData["NameSort"] = sortStateBeer == SortStateBeer.NameDesc ? SortStateBeer.NameAsc: SortStateBeer.NameDesc;
-            ViewData["QuantitySort"] = sortStateBeer == SortStateBeer.QuantityDesc ? SortStateBeer.QuantityAsc : SortStateBeer.QuantityDesc;
-
-            beersSort = sortStateBeer switch
-            {
-                SortStateBeer.NameDesc => beersSort.OrderByDescending(x => x.name),
-                SortStateBeer.NameAsc => beersSort?.OrderBy(x => x.name),
-                SortStateBeer.QuantityAsc => beersSort.OrderByDescending(y => y.quantity),
-                SortStateBeer.QuantityDesc => beersSort.OrderBy(y => y.quantity)
-            };
-            return View(await beersSort.AsNoTracking().ToListAsync());
-        }**********************************************************************************************************************************************************************/
+        //*******************************************************************************************************************************************************/
 
         public IActionResult CreateBreweries()
         {

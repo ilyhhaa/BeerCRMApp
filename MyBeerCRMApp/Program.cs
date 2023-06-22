@@ -3,6 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using MyBeerCRMApp.Areas.Identity.Data;
 using MyBeerCRMApp.Data;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+string Connection = builder.Configuration.GetConnectionString("DefaultConnection");
+
 var connectionString = builder.Configuration.GetConnectionString("MyBeerCRMAppAuthDBContextConnection") ?? throw new InvalidOperationException("Connection string 'MyBeerCRMAppAuthDBContextConnection' not found.");
 
 builder.Services.AddDbContext<MyBeerCRMAppAuthDBContext>(options => options.UseSqlServer(connectionString));
@@ -18,6 +24,8 @@ builder.Services.Configure<IdentityOptions>(options=>options.Password.RequireUpp
 builder.Services.Configure<IdentityOptions>(options => options.Password.RequireNonAlphanumeric = false); //Наверное стоит пробросить еще одну штуку, там в свойствах есть требование для не алфавитно-цифровых символов RequireNonAlphanumeric надо чтобы они были, но мы наверное от этого откажемся 
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

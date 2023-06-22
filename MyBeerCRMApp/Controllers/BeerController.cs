@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MyApp1.Models;
+using MyBeerCRMApp.Models;
 
-namespace MyApp1.Controllers
+using System.Xml.Linq;
+
+namespace MyBeerCRMApp.Controllers
 {
+    [Authorize]
     public class BeerController : Controller
     {
         readonly ApplicationContext db;
@@ -18,24 +22,7 @@ namespace MyApp1.Controllers
             return View(await db.beers.ToListAsync());
         }
 
-        //РАЗОБРАТЬСЯ С СОРТИРОВКОЙ *********************************************************************************************************************
-        public async Task<IActionResult> BeerSort(SortStateBeer sortStateBeer = SortStateBeer.NameDesc)
-        {
-            IQueryable<Beer>? beersSort = db.beers.Include(x => x.name);
-
-            ViewData["NameSort"] = sortStateBeer == SortStateBeer.NameDesc ? SortStateBeer.NameAsc : SortStateBeer.NameDesc;
-            ViewData["QuantitySort"] = sortStateBeer == SortStateBeer.QuantityDesc ? SortStateBeer.QuantityAsc : SortStateBeer.QuantityDesc;
-
-            beersSort = sortStateBeer switch
-            {
-                SortStateBeer.NameDesc => beersSort.OrderByDescending(x => x.name),
-                SortStateBeer.NameAsc => beersSort.OrderBy(x => x.name),
-                SortStateBeer.QuantityAsc => beersSort.OrderByDescending(x => x.quantity),
-                SortStateBeer.QuantityDesc => beersSort.OrderBy(x => x.quantity),
-                _=>beersSort.OrderByDescending(x => x.name),
-            };
-            return View(await beersSort.ToListAsync());
-        }
+        
         
 
         public IActionResult CreateBeer()

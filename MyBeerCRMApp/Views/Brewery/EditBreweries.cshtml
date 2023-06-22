@@ -1,0 +1,21 @@
+﻿@model MyBeerCRMApp.Models.Brewery
+
+<h2>Редактирование пивоварни</h2>
+
+<form asp-asp-controller="Brewery" asp-action="EditBreweries" asp-route-id="@Model.Id">
+
+    <p>
+        <label asp-for="Name">Название пивоварни</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+
+    <p>
+        <label asp-for="Description">Описание пивоварни</label><br />
+        <input type="text" asp-for="Description" />
+    </p>
+
+    <p>
+        <input type="submit" value="Обновить" />
+    </p>
+
+</form>

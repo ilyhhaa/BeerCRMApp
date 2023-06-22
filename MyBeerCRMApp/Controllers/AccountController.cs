@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MyApp1.Models;
+using MyBeerCRMApp.Models;
 using System.Security.Claims;
 
 namespace MyApp1.Controllers
