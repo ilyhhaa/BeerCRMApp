@@ -4,20 +4,22 @@ using MyBeerCRMApp.Areas.Identity.Data;
 using MyBeerCRMApp.Data;
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRazorPages();
-builder.Services.AddControllersWithViews();
-builder.Services.AddControllers();
-string Connection = builder.Configuration.GetConnectionString("DefaultConnection");
+
 
 var connectionString = builder.Configuration.GetConnectionString("MyBeerCRMAppAuthDBContextConnection") ?? throw new InvalidOperationException("Connection string 'MyBeerCRMAppAuthDBContextConnection' not found.");
 
 builder.Services.AddDbContext<MyBeerCRMAppAuthDBContext>(options => options.UseSqlServer(connectionString));
 
+string Connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDefaultIdentity<MyBeerCRMAppUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<MyBeerCRMAppAuthDBContext>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
 builder.Services.Configure<IdentityOptions>(options=>options.Password.RequireUppercase=false); //Если здесь сбегать в дифинишн можно увидеть свойства пароля и собсна обнаружить интересные вещи(типа минимальное кол-во символов будет - 6 (шок)
                                                                                                //Но если не устраивает можно закастомить как тут через ламбда експрешионс!
                                                                                                //Нужно еще написать, шо я сделал, я убрал необходимость в апперкейс символах для регистрации пароля 
