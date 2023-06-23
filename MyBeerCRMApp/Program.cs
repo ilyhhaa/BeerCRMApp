@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MyBeerCRMApp.Areas.Identity.Data;
 using MyBeerCRMApp.Data;
+using MyBeerCRMApp.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -10,9 +12,10 @@ var connectionString = builder.Configuration.GetConnectionString("MyBeerCRMAppAu
 
 builder.Services.AddDbContext<MyBeerCRMAppAuthDBContext>(options => options.UseSqlServer(connectionString));
 
-string Connection = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDefaultIdentity<MyBeerCRMAppUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<MyBeerCRMAppAuthDBContext>();
 
+string Connection =  builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDefaultIdentity<MyBeerCRMAppUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<MyBeerCRMAppAuthDBContext>();
+builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Connection));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
