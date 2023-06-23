@@ -10,7 +10,7 @@ public class MyBeerCRMAppAuthDBContext : IdentityDbContext<MyBeerCRMAppUser>
     public MyBeerCRMAppAuthDBContext(DbContextOptions<MyBeerCRMAppAuthDBContext> options)
         : base(options)
     {
-    }
+    } 
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
