@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing.Constraints;
 
 namespace MyBeerCRMApp.Models
 {
@@ -9,5 +10,9 @@ namespace MyBeerCRMApp.Models
         public double Volume { get; set; }
 
         public double Result { get; set; }
+
+        public double Cash { get; set; }
+
+        public double Change { get; set; }
     }
 }

@@ -12,11 +12,23 @@ namespace MyBeerCRMApp.Controllers
         }
         [HttpGet]
         public ActionResult CalcBeer() => View();
+
         [HttpPost]
         public double CalcBeer(CalcModel model)
         {
             model.Result = model.Price * model.Volume;
-            return (model.Result);
+            return model.Result;
+        }
+        
+        [HttpGet]
+        public ActionResult ChangeCalc() => View();
+        
+        [HttpPost]
+        public double ChangeCalc(CalcModel model)
+        {
+            model.Change = model.Cash - (model.Price * model.Volume);
+
+            return model.Change;
         }
         
     }
