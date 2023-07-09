@@ -10,7 +10,7 @@ namespace MyBeerCRMApp.Controllers
     [Authorize]
     public class BeerController : Controller
     {
-        readonly ApplicationContext db;
+        ApplicationContext db;
         public BeerController(ApplicationContext context)
         {
             db = context;
