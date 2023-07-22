@@ -1,35 +1,34 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyBeerCRMApp.Models;
 
 namespace MyBeerCRMApp.Controllers
 {
     public class CalcController : Controller
     {
-        ApplicationContext db;
-        public CalcController(ApplicationContext context)
+        [Authorize]
+        public IActionResult Calculate()
         {
-            db = context;
+            return View(new CalcModel());
         }
-        [HttpGet]
-        public ActionResult CalcBeer() => View();
 
         [HttpPost]
-        public double CalcBeer(CalcModel model)
-        {
-            model.Result = model.Price * model.Volume;
-            return model.Result;
-        }
-        
-        [HttpGet]
-        public ActionResult ChangeCalc() => View();
-        
-        [HttpPost]
-        public double ChangeCalc(CalcModel model)
-        {
-            model.Change = model.Cash - (model.Price * model.Volume);
+        [Authorize]
 
-            return model.Change;
-        }
         
+        public IActionResult Calculate(CalcModel c, string calculate)
+        {
+            if (calculate == "Calculate_Beer")
+            {
+                c.Total = c.Calc_BeerPrice * c.Calc_BeerQuantity;
+            }
+            else if (calculate == "Calculate_Change")
+            {
+                c.Change = c.Cash - c.Total;
+            }
+            
+
+            return View(c);
+        }
     }
 }

@@ -1,0 +1,86 @@
+﻿@model MyBeerCRMApp.Models.CalcModel
+
+
+<html>
+    <head>
+
+
+    </head>
+
+
+    <body>
+        <h2>Calculate Beer</h2>
+
+
+        <div class="row">
+        @using (Html.BeginForm("/Calculate", "Calc", FormMethod.Post))
+        {
+            <div class="form-group">
+
+                <label for="Calc_BeerPrice"> Beer Price </label>
+                <input type="text" class="form-control" id="Calc_BeerPrice" name="Calc_BeerPrice" value="@Model.Calc_BeerPrice">
+
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="Calc_BeerQuantity"> Beer Quantity </label>
+                <input type="text" class="form-control" id="Calc_BeerQuantity" name="Calc_BeerQuantity" value="@Model.Calc_BeerQuantity">
+
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="Total"> Total </label>
+                <input type="text" class="form-control" id="Total" name="Total" value="@Model.Total">
+
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="Total"> Cash </label>
+                <input type="text" class="form-control" id="Cash" name="Cash" value="@Model.Cash">
+
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="Total"> Change </label>
+                <input type="text" class="form-control" id="Change" name="Change" value="@Model.Change">
+
+
+            </div>
+
+            <button type="submit" class="btn btn-info" id="CalculateBeer" value="Calculate_Beer" name="calculate">Calculate Beer</button>
+
+            <button type="submit" class="btn btn-warning" id="CalculateChange" value="Calculate_Change" name="calculate">Calculate Change</button>
+        }
+    </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

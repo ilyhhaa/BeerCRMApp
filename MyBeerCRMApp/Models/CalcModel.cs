@@ -5,14 +5,14 @@ namespace MyBeerCRMApp.Models
 {
     public class CalcModel
     {
-        public double Price { get; set; }
-        
-        public double Volume { get; set; }
+        public double Calc_BeerPrice { get; set; }
 
-        public double Result { get; set; }
+        public double Calc_BeerQuantity { get; set; }
 
-        public double Cash { get; set; }
+        public double Total { get; set; }
 
         public double Change { get; set; }
+
+        public double Cash { get; set; }
     }
 }
