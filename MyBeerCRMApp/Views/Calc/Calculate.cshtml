@@ -13,7 +13,7 @@
 
 
         <div class="row">
-        @using (Html.BeginForm("/Calculate", "Calc", FormMethod.Post))
+        @using (Html.BeginForm("Calculate", "Calc", FormMethod.Post))
         {
             <div class="form-group">
 
@@ -42,7 +42,7 @@
 
             <div class="form-group">
 
-                <label for="Total"> Cash </label>
+                <label for="Cash"> Cash </label>
                 <input type="text" class="form-control" id="Cash" name="Cash" value="@Model.Cash">
 
 
@@ -50,15 +50,15 @@
 
             <div class="form-group">
 
-                <label for="Total"> Change </label>
+                <label for="Change"> Change </label>
                 <input type="text" class="form-control" id="Change" name="Change" value="@Model.Change">
 
 
             </div>
 
-            <button type="submit" class="btn btn-info" id="CalculateBeer" value="Calculate_Beer" name="calculate">Calculate Beer</button>
+            <button type="submit" class="btn btn-info" id="CalculateBeer" value="Calculate_Beer" name="Calculate">Calculate Beer</button>
 
-            <button type="submit" class="btn btn-warning" id="CalculateChange" value="Calculate_Change" name="calculate">Calculate Change</button>
+            <button type="submit" class="btn btn-warning" id="CalculateChange" value="Calculate_Change" name="Calculate">Calculate Change</button>
         }
     </div>
     </body>
