@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MyBeerCRMApp.Migrations;
 using MyBeerCRMApp.Models;
 
 namespace MyBeerCRMApp.Controllers
 {
     public class CalcController : Controller
     {
+        ApplicationContext db;
+        
         [Authorize]
         public IActionResult Calculate()
         {
@@ -27,8 +30,10 @@ namespace MyBeerCRMApp.Controllers
                 c.Change = c.Cash - c.Total;
             }
             
+            
 
             return View(c);
         }
+       
     }
 }
