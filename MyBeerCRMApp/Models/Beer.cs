@@ -8,8 +8,5 @@
         
         public int quantity { get; set; }
 
-       
-
-
     }
 }
