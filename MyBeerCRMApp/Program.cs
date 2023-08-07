@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MyBeerCRMApp.Areas.Identity.Data;
 using MyBeerCRMApp.Data;
 using MyBeerCRMApp.Models;
+using TodoManager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,11 @@ builder.Services.AddDbContext<MyBeerCRMAppAuthDBContext>(options => options.UseS
 string Connection =  builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDefaultIdentity<MyBeerCRMAppUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<MyBeerCRMAppAuthDBContext>();
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Connection));
+
+string TodoDBConnection = builder.Configuration.GetConnectionString("TodoDbConnection");
+
+builder.Services.AddDbContext<TodoDbContext>(options => options.UseSqlServer(TodoDBConnection));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
