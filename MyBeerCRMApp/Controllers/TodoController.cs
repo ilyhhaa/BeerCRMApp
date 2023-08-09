@@ -44,7 +44,15 @@ namespace TodoManager.Controllers
             if (id != null)
             {
                 TodoModel model = todoDb.todos.FirstOrDefault(x => x.id == id);
-                if (model != null) return View(model);
+                if (model != null)
+                {
+                    todoDb.Remove(model);
+                    todoDb.SaveChanges();
+                    return View(model);
+
+                }
+                    
+                    
             }
 
             return NotFound();
