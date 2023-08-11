@@ -57,6 +57,32 @@ namespace TodoManager.Controllers
 
             return NotFound();
         }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> EditTask(int? id)
+        {
+            if (id != null)
+            {
+                TodoModel? model = todoDb.todos.FirstOrDefault(x=>x.id == id);
+                if(model != null)
+                {
+                    return View(model);
+                }
+                
+
+            }
+            return NotFound();
+        }
+
+        public async Task<IActionResult>EditTask(TodoModel model)
+        {
+            todoDb.todos.Update(model);
+            await todoDb.SaveChangesAsync();
+            return RedirectToAction("TodoIndex");
+        }
+
+
     }
 }
 
