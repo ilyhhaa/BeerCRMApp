@@ -1,0 +1,22 @@
+﻿@model MyBeerCRMApp.Models.TodoModel;
+
+
+<h2>Редактирование пива</h2>
+
+<form asp-asp-controller="Beer" asp-action="BeerEdit" asp-route-id ="@Model.id">
+
+    <p>
+        <label asp-for="name">Название пива</label><br />
+        <input type="text" asp-for="name" />
+    </p>
+
+    <p>
+        <label asp-for="quantity">Количество пива</label><br/>
+        <input type="number" asp-for ="quantity"/>
+    </p>
+
+    <p>
+        <input type="submit" value="Обновить" />
+    </p>
+
+</form>
