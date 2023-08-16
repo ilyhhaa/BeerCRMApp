@@ -6,10 +6,11 @@ using TodoManager.Models;
 
 namespace TodoManager.Controllers
 {
+    [Authorize]
     public class TodoController : Controller
     {
         TodoDbContext todoDb;
-
+        
         public TodoController(TodoDbContext context)
         {
             todoDb = context;
@@ -21,7 +22,7 @@ namespace TodoManager.Controllers
         }
 
 
-
+        [Authorize]
         public IActionResult CreateTask()
         {
             return View();
@@ -74,7 +75,7 @@ namespace TodoManager.Controllers
             }
             return NotFound();
         }
-
+        [Authorize]
         public async Task<IActionResult>EditTask(TodoModel model)
         {
             todoDb.todos.Update(model);
