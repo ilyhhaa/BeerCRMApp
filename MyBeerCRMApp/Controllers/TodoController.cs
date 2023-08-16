@@ -18,19 +18,21 @@ namespace TodoManager.Controllers
 
         public async Task<IActionResult> TodoIndex()
         {
-            return View(await todoDb.todos.ToListAsync());
+            return View(await todoDb.Todo.ToListAsync());
         }
 
 
         [Authorize]
+        [HttpGet]
         public IActionResult CreateTask()
         {
             return View();
         }
 
+        [HttpPost]
         public async Task<IActionResult> CreateTask(TodoModel model)
         {
-            todoDb.todos.Add(model);
+            todoDb.Todo.Add(model);
             await todoDb.SaveChangesAsync();
             return Redirect("TodoIndex");
 
@@ -44,7 +46,7 @@ namespace TodoManager.Controllers
         {
             if (id != null)
             {
-                TodoModel model = todoDb.todos.FirstOrDefault(x => x.id == id);
+                TodoModel model = todoDb.Todo.FirstOrDefault(x => x.id == id);
                 if (model != null)
                 {
                     todoDb.Remove(model);
@@ -65,7 +67,7 @@ namespace TodoManager.Controllers
         {
             if (id != null)
             {
-                TodoModel? model = todoDb.todos.FirstOrDefault(x=>x.id == id);
+                TodoModel? model = todoDb.Todo.FirstOrDefault(x=>x.id == id);
                 if(model != null)
                 {
                     return View(model);
@@ -78,7 +80,7 @@ namespace TodoManager.Controllers
         [Authorize]
         public async Task<IActionResult>EditTask(TodoModel model)
         {
-            todoDb.todos.Update(model);
+            todoDb.Todo.Update(model);
             await todoDb.SaveChangesAsync();
             return RedirectToAction("TodoIndex");
         }
