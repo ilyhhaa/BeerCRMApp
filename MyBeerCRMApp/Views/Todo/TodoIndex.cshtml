@@ -1,36 +1,21 @@
-﻿@model IEnumerable<MyBeerCRMApp.Models.Beer>
+﻿@model IEnumerable<TodoManager.Models.TodoModel>
 
 <h2>Список пива</h2>
 <p><a asp-action="createBeer">Добавить пиво</a></p>
 <table class="table">
-    <tr>
-        <th>
-          Идентификационный номер          @*Написать реализацию для сорта айди*@
-         </th>
-
-        <th>
-            <a asp-action="BeerSort" asp-route-sortStateBeer="@ViewBag.NameSort"> Название пива</a>
-          
-        </th>
-
-        <th>
-            <a asp-action="BeerSort" asp-route-sortStateBeer="@ViewBag.QuantitySort">  Количество пива </a>
-            </th>
-    
-    </tr>
 
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.id</td>
-            <td>@item.name</td>
-            <td>@item.quantity</td>
+            <td>@item.Name</td>
+          
 
             <td> 
-                <a asp-action="BeerEdit" asp-controller="Beer" asp-route-id="@item.id">Изменить</a>
+                <a asp-action="EditTask" asp-controller="Todo" asp-route-id="@item.id">Изменить</a>
             </td>
             <td>
-                <form asp-controller="Beer" asp-action="DeleteBeer" method="post" asp-route-id="@item.id">
+                <form asp-controller="Todo" asp-action="DeleteTask" method="post" asp-route-id="@item.id">
                     <input type="submit" value="Удалить" />
 
                 </form>

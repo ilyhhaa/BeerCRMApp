@@ -1,18 +1,14 @@
-﻿@model MyBeerCRMApp.Models.TodoModel;
+﻿@model TodoManager.Models.TodoModel
 
 
-<h2>Редактирование пива</h2>
+<h2>Редактирование Задач</h2>
 
-<form asp-asp-controller="Beer" asp-action="BeerEdit" asp-route-id ="@Model.id">
-
-    <p>
-        <label asp-for="name">Название пива</label><br />
-        <input type="text" asp-for="name" />
-    </p>
+<form asp-asp-controller="Todo" asp-action="EditTask" asp-route-id ="@Model.id">
 
     <p>
-        <label asp-for="quantity">Количество пива</label><br/>
-        <input type="number" asp-for ="quantity"/>
+        <label asp-for="Name">Задача</label><br />
+        <input type="text" asp-for="Name
+" />
     </p>
 
     <p>
